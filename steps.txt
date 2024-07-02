@@ -1,0 +1,9 @@
+1- shadcdn install
+npx shadcn-ui@latest init
+-- new york , slate ,
+
+indirilen bu ui icinde componentlar tekrar indiriliyor ve rahatca kullaniliyor component icine gider
+
+(auth) icinde login mesela -- calisir ve group lamis oluruz
+
+_components mesela bu kaideye alinmaz demek
