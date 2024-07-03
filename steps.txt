@@ -54,3 +54,40 @@ npm install next-auth@beta
 
 -- secret key almak github için online
 https://authjs.dev/reference/core/errors#missingsecret
+
+direkt db' i gormek icin
+sudo npx prisma studio
+
+- DATABASE sıfırlama
+sudo npx prisma migrate reset
+
+bundan sonra push edilcek ama
+
+
+PROVIDERS önemli config dosyası içinde
+{
+  "github": {
+    "id": "github",
+    "name": "GitHub",
+    "type": "oauth",
+    "signinUrl": "http://localhost:3000/api/auth/signin/github",
+    "callbackUrl": "http://localhost:3000/api/auth/callback/github"
+  },
+  "credentials": {
+    "id": "credentials",
+    "name": "Credentials",
+    "type": "credentials",
+    "signinUrl": "http://localhost:3000/api/auth/signin/credentials",
+    "callbackUrl": "http://localhost:3000/api/auth/callback/credentials"
+  }
+}
+
+redirectTo: DEFAULT_LOGIN_REDIRECT
+olacak 
+redirectUrl degil !!!
+
+await signOut({
+    redirectTo:'/auth/login'
+});
+
+kendim verdim

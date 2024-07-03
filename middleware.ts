@@ -6,6 +6,7 @@ import {
     authRoutes,
     publicRoutes
 } from './routes'
+
 const {auth} = NextAuth(authConfig);
 
 // middleware next icin gerek

@@ -1,13 +1,25 @@
 // roottaki auth dosyasi bu
-import {auth} from "@/auth"
-import { json } from "stream/consumers";
-
+import {auth,signOut} from "@/auth"
+import React from 'react';
 
 const SettingsPage = async () => {
-    const settings = await auth();
+    const session = await auth();
+
     return (
         <div>
-            {JSON.stringify(settings)}
+            {JSON.stringify(session)}
+            <form action={async () => {
+                'use server';
+
+                // ekstra param gerekti
+                await signOut({
+                    redirectTo:'/auth/login'
+                });
+            }}>
+                <button type="submit">
+                    Sign out
+                </button>
+            </form>
         </div>
     )
 }
