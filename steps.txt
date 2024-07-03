@@ -91,3 +91,13 @@ await signOut({
 });
 
 kendim verdim
+
+GITHUB Register a new OAuth application
+Homepage URL : http://localhost:3000
+Authorization callback URL : http://localhost:3000/api/auth/callback/github
+
+Google icin gidip google api console
+yeni proje
+apis & services
+OAUTH
+ => EXternal
