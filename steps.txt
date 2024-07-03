@@ -23,3 +23,5 @@ Componentlar export direkt
 
 // input ve formlar eklendi
 bugra@192 auth-pro % sudo npx shadcn-ui@latest add input
+
+server action tanımlanıyorsa async yap hatalar bazen gider
