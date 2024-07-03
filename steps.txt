@@ -25,3 +25,22 @@ Componentlar export direkt
 bugra@192 auth-pro % sudo npx shadcn-ui@latest add input
 
 server action tanımlanıyorsa async yap hatalar bazen gider
+
+prisma kurulmali
+
+sudo npm i -D prisma
+sonra
+sudo npm i @prisma/client
+
+sonra dosya yazilir ve sonra
+sudo npx prisma init
+
+postgre sunucu lazim
+ucretsiz : neon.tech
+https://console.neon.tech/app/projects/white-flower-87338990/quickstart
+
+// once generate ederiz sonra push ederiz prisma boyle
+sudo npx prisma generate
+sudo npx prisma db push
+
+@auth/prisma-adapter
