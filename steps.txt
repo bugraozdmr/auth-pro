@@ -44,3 +44,13 @@ sudo npx prisma generate
 sudo npx prisma db push
 
 @auth/prisma-adapter
+
+
+-- sifreleme
+sudo npm install @types/bcrypt
+
+-- next auth
+npm install next-auth@beta
+
+-- secret key almak github için online
+https://authjs.dev/reference/core/errors#missingsecret
