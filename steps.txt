@@ -7,3 +7,19 @@ indirilen bu ui icinde componentlar tekrar indiriliyor ve rahatca kullaniliyor c
 (auth) icinde login mesela -- calisir ve group lamis oluruz
 
 _components mesela bu kaideye alinmaz demek
+
+--- globals.css'e
+html,
+body,
+:root {
+  height: 100%;
+}
+
+---- Wrap edilen comp illa buton olmak zorunda degil <LoginButton>
+
+Route'lar page ler export default
+
+Componentlar export direkt
+
+// input ve formlar eklendi
+bugra@192 auth-pro % sudo npx shadcn-ui@latest add input
