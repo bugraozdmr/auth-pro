@@ -25,17 +25,17 @@ export const {
         }
     },
     callbacks: {
-        async signIn({user}){
+        async signIn({user, account}){
+            // Allow OAuth without email verification
+            if(account?.provider !== 'credentials') return true;
+
             // ne gelir biliyorsak yaz gec - ts sıkıntılı abi
             const existingUser = await getUserById(user.id as string);
 
+            // Prevent sign in without email verification
+            if(!existingUser || !existingUser.emailVerified) return false;
 
-            // mail onay gerek
-            if(!existingUser || !existingUser.emailVerified){
-                // TODO CHANGE FALSE
-                return true;
-            }
-
+            // TODO: add 2FA check
             return true;
         },
         async session({token,session}){

@@ -101,3 +101,12 @@ yeni proje
 apis & services
 OAUTH
  => EXternal
+
+
+// TOKENLAR ILE ILGILI
+ npm i uuid
+ sudo npm i --save-dev @types/uuid
+
+RESEND -- email for developers
+dev kısmında anca kendine email gonderirsin domain olmalıki email cidden baska yerlere gidebilsin domain baglanmali
+sudo npm i resend
