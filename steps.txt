@@ -110,3 +110,6 @@ OAUTH
 RESEND -- email for developers
 dev kısmında anca kendine email gonderirsin domain olmalıki email cidden baska yerlere gidebilsin domain baglanmali
 sudo npm i resend
+
+
+TODO : hazır link tanımla bu template icin domain olarak orayi verirsin diger yerlere tek tek localhost:// girmene gerek kalmaz

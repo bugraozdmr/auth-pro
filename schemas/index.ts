@@ -1,5 +1,17 @@
 import * as z from 'zod';
 
+export const NewPasswordSchema = z.object({
+    password: z.string().min(6,{
+        message: "Min of 6 characters required",
+    }),
+});
+
+export const ResetSchema = z.object({
+    email: z.string().email({
+        message: "Email is required",
+    }),
+});
+
 // loginde min sınırı atma -- onceden kaydolmus 6 haneden az olanlar olabilir
 export const LoginSchema = z.object({
     email: z.string().email({
@@ -19,6 +31,5 @@ export const RegisterSchema = z.object({
     }),
     name: z.string().min(1,{
         message: 'Name is required',
-    }),
-    
+    }), 
 });
