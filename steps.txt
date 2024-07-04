@@ -126,3 +126,8 @@ return (
   </SessionProvider>
 );
 Layout böyle olmalı
+
+import { Toaster } from "@/components/ui/sonner";
+Toaster layout'a eklenmeli ama hatalar ya da mesajlar bura duser bura dusecektir
+
+alttan cıkan pop up gibi guzel duruyor

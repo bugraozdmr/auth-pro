@@ -7,3 +7,10 @@ export const currentUser = async () => {
 
     return session?.user;
 }
+
+export const CurrentRole = async () => {
+    const session = await auth();
+
+    // burda session altinda data olmaz
+    return session?.user?.role;
+};
