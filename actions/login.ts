@@ -7,6 +7,7 @@ import {AuthError} from 'next-auth'
 import { generateVerificationToken } from '@/lib/tokens';
 import { getUserByEmail } from '@/data/user';
 import { sendVerificationEmail } from '@/lib/mail';
+import bcrypt from 'bcrypt'
 
 export const login = async (values : z.infer<typeof LoginSchema>) => {
     const validatedFields = LoginSchema.safeParse(values);
@@ -24,7 +25,13 @@ export const login = async (values : z.infer<typeof LoginSchema>) => {
         return {error:'Invalid email or password !'};
     }
 
-    if(!existingUser.emailVerified){
+    // IMPORTANT -- IF NOT PASSWORDS MATCH DONT SEND CONFIRMATION EMAIL -- THIS ONE WAS FORGOTTEN
+    const passwordsMatch = await bcrypt.compare(
+        password,
+        existingUser.password
+    );
+
+    if(!existingUser.emailVerified && passwordsMatch){
         // hata alir yoksa as string
         const verificationToken = await generateVerificationToken(
             existingUser.email as string
