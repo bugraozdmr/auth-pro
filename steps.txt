@@ -113,3 +113,16 @@ sudo npm i resend
 
 
 TODO : hazır link tanımla bu template icin domain olarak orayi verirsin diger yerlere tek tek localhost:// girmene gerek kalmaz
+
+
+*******
+Session 'ı çekmek için 
+
+return (
+  <SessionProvider>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  </SessionProvider>
+);
+Layout böyle olmalı
