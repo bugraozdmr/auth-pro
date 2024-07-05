@@ -12,7 +12,8 @@ export const {
     handlers: {GET,POST},
     auth,
     signIn,
-    signOut
+    signOut,
+    update
 } = NextAuth({
     pages:{
         signIn: '/auth/login',
@@ -73,9 +74,10 @@ export const {
                 // session updated - - - After token update dont forget updating session also
                 session.user.name = token.name;
                 session.user.email = token.email as string;
-                session.user.isOAuth = token.isOAuth as boolean;
+                session.user.isOAuth = token.isOAth as boolean;
             }
 
+            
             return session;
         },
         async jwt ({token}){

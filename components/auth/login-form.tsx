@@ -30,6 +30,8 @@ export function LoginForm() {
       ? "Email already in use with different provider!"
       : "";
 
+  const callbackUrl = searchParams.get('callbackUrl');
+
   const [showTwoFactor, setShowTwoFactor] = useState(false);
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState<string | undefined>("");
@@ -49,7 +51,7 @@ export function LoginForm() {
     setSuccess("");
 
     startTransition(() => {
-      login(values)
+      login(values, callbackUrl)
         .then((data: any) => {
           if (data?.error) {
             form.reset();

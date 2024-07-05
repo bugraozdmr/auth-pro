@@ -24,7 +24,8 @@ export default function Home() {
           A simple authentication system for Next.js
         </p>
         <div>
-          <LoginButton >
+          {/* dialog olarak acilsin istendi - - -  */}
+          <LoginButton mode="modal" asChild>
             <Button variant='secondary' size='lg'>
               Sign in
             </Button>
