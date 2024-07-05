@@ -9,6 +9,7 @@ import {
 
 const {auth} = NextAuth(authConfig);
 
+// BU AMK NULL DONMICEK
 // middleware next icin gerek
 // uyandirilmasi icin config verildi belirli yerde gelir
 export default auth((req) => {
@@ -23,7 +24,7 @@ export default auth((req) => {
 
     // api routelarına izin verir direkt
     if(isApiAuthRoute){
-        return null;
+        return ;
     }
 
     if(isAuthRoute){
@@ -31,7 +32,7 @@ export default auth((req) => {
         if(isLoggedIn){
             return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT,nextUrl))
         }
-        return null;
+        return ;
     }
 
     if(!isLoggedIn && !isPublicRoute){
@@ -50,7 +51,7 @@ export default auth((req) => {
     }
 
     // ancak bu sekilde olur sira onemli
-    return null;
+    return ;
 })
 
 export const config = {
