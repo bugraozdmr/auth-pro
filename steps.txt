@@ -135,3 +135,5 @@ alttan cıkan pop up gibi guzel duruyor
 -- MESELA SERVER DEPLOYDA hata varsa yuklemeden 
 
 sudo npm run build ile hataları alırsın
+
+uygulama bitiminde github oauth değiş google oauth değiş linki değiş env'den
